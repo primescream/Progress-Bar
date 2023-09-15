@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Progress</title>
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Link to FontAwesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        .progress-bar {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .tab {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .tab-icon {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .tab-label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .progress-bar-container {
+            position: relative;
+            height: 20px;
+        }
+
+        .progress-fill {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            height: 100%;
+            border-radius: 10px;
+            background-color: #28a745;
+            transition: width 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="progress-bar">
+                    <div class="tab-container">
+                        <div class="tab">
+                            <div class="tab-icon"><i class="fas fa-check-circle text-success"></i></div>
+                            <div class="tab-label">Approved by Matrix Manager</div>
+                        </div>
+                        <div class="tab">
+                            <div class="tab-icon"><i class="fas fa-check-circle text-success"></i></div>
+                            <div class="tab-label">Approved by Manager</div>
+                        </div>
+                        <div class="tab">
+                            <div class="tab-icon"><i class="fas fa-hourglass text-warning"></i></div>
+                            <div class="tab-label">Approved by Reviewer</div>
+                        </div>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-fill" id="progress-fill" style="width: 66.66%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
